@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PatientNavBar from './PatientNavBar'
+import Styles from '../Styles/Patients.module.css'
 
 function Records() {
     const[records,setRecords]=useState([
@@ -9,6 +10,7 @@ function Records() {
             Date:"12-01-2004",
             hospitalId:21,
              hospitalName:"Krishna",
+             DoctorName: "xyz",
             bloodpressure:"120mmHg",
             weight:58,
             consultant:"Sabari",
@@ -23,6 +25,7 @@ function Records() {
             Date: "12-01-2004",
             hospitalId: 21,
             hospitalName: "KCT",
+            DoctorName: "xyz",
             bloodpressure: "120mmHg",
             weight: 58,
             consultant: "Jega",
@@ -37,6 +40,7 @@ function Records() {
             Date: "12-01-2004",
             hospitalId: 21,
             hospitalName: "kpr",
+            DoctorName: "xyz",
             bloodpressure: "120mmHg",
             weight: 58,
             consultant: "rahul",
@@ -51,6 +55,7 @@ function Records() {
             Date: "12-01-2004",
             hospitalId: 21,
             hospitalName: "Krishna",
+            DoctorName: "xyz",
             bloodpressure: "120mmHg",
             weight: 58,
             consultant: "Sathish",
@@ -58,36 +63,53 @@ function Records() {
                 drugId: 1,
                 drugName: "dolo-650"
             }
+        },
+        {
+            id: 3,
+            patientId: 13,
+            Date: "10-04-2002",
+            hospitalId: 11,
+            hospitalName: "Balaraman",
+            DoctorName: "xyz",
+            bloodpressure: "100mmHg",
+            weight: 70,
+            consultant: "Gokul",
+            drug: {
+                drugId: 2,
+                drugName: "paracetamol"
+            }
         }
     ])
   return (
     <div>
         <PatientNavBar/>
-        <div>{
-            records.map((rec,ind)=>
-            <div>
-                 <h3>
-                    {rec.id}
-                    </h3>
-                    <h3>
-                    {rec.patientId}
-                        </h3>
-                        <h3>
-                    {rec.Date}
-                            </h3>
-                            <h3>
-                    {rec.hospitalName}
-                                </h3>
-                                <h3>
-                    {rec.consultant}
-                                    </h3>
-                                    <h3>
-                    {rec.drug.drugName}
-
-                 </h3>
-                </div>)
-}
-        </div>
+        <center>
+            <b><p style={{marginTop: "20px"}}>RECENT RECORDS</p></b>
+            <table className={Styles.RecordContainer} cellPadding="30px"cellSpacing="30px">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Hospital</th>
+                        <th>Doctor</th>
+                        <th>Prescribed Drug</th>
+                        <th>More Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {records.map((record)=>{
+                        return(
+                            <tr>
+                                <td>{record.Date}</td>
+                                <td>{record.hospitalName}</td>
+                                <td>{record.DoctorName}</td>
+                                <td>{record.drug.drugName}</td>
+                                <td><a href="#" style={{textDecoration: "none"}}>View More...</a></td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
+        </center>
     </div>
   )
 }
