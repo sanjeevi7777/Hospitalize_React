@@ -23,6 +23,13 @@
     padding: 10px 15px ;
 
 }
+.containerTable td button{
+    border:none;
+    padding: 7px;
+    background-color: rgb(51, 193, 240);
+    border-radius: 5px;
+
+}
 tr:nth-child(odd){
     background-color: rgb(243, 243, 243);
 }

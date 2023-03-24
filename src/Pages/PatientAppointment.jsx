@@ -1,7 +1,7 @@
 import PatientNavBar from '../Components/PatientNavBar'
 import { useParams, useNavigate ,useLocation} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-
+import Styles from '../Styles/Doctors.module.css'
 function PatientAppointment() {
     const navigate=useNavigate();
     let {id}=useParams();
@@ -37,34 +37,35 @@ function PatientAppointment() {
   return (
     <>
         <PatientNavBar/>
-        <div>
-            <table>
-            <thead>
+        <div  className={Styles.appoinmentContainer}>
+            <div>
+            <h1  style={{marginTop:"30px"}} className={Styles.appoinmentHeading }>Select Your Doctor</h1>
+            <table style={{marginTop:"30px"}} className={Styles.containerTable}>
+                <tr>
                 <th>DoctorId</th>
                 <th>
                     Doctor Name
                 </th>
                 <th>Specialist</th>
                 <th>Submit</th>
-            </thead>
+                </tr>
+    
             {
               doctors.filter(doctor=>doctor.hopitalId==id).map((doc)=>
-            <tbody>
+
                 <tr>
                               <td>{doc.doctorId} </td>
                               <td>{doc.doctorName}</td>
                               <td>{doc.specialist}</td>
-                              <td><button onClick={(e)=>{navigate(`bookAppointment`,{state:{docId:doc.doctorId}})}}>BOOK</button></td>
+                              <td><button  onClick={(e)=>{navigate(`bookAppointment`,{state:{docId:doc.doctorId}})}}>BOOK</button></td>
                         </tr>
                 
-            </tbody>
+
               )
             }
           </table>
-        </div>
-
-
-                
+          </div>
+        </div> 
     </>
   )
 }

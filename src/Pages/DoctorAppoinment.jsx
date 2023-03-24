@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from "../Styles/Doctors.module.css"
 import {Link} from 'react-router-dom';
 import DoctorNavBar from '../Components/DoctorNavBar';
-
+import axios from 'axios'
 function DoctorAppoinment() {
     const [details, setDetails] = useState([
         {   Id:1,

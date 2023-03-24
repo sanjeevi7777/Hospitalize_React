@@ -17,9 +17,9 @@ function PatientNavBar() {
                             <li class="nav-item">
                                 <Link class="nav-link active" to="/patient/home">Home</Link>
                             </li>
-                            {/* <li class="nav-item">
-                                <Link class="nav-link active" to='/patient/appointment'>Appoinment</Link>
-                            </li> */}
+                            <li class="nav-item">
+                                <Link class="nav-link active" to='/patient'>Appoinment</Link>
+                            </li>
                             <li class="nav-item">
                                 <Link class="nav-link active" to='/patient/aboutus'>About</Link>
                             </li>
@@ -34,7 +34,7 @@ function PatientNavBar() {
                                 <span class="glyphicon glyphicon-user"></span>
 
 
-                                <Link class="nav-link active" to='/patient/profile'><Icon.Person width="30" />Profile</Link>
+                                <Link class="nav-link active" to='/patient/profile'><Icon.Person width="30" size="20" />Profile</Link>
                             </li>
 
                         </ul>

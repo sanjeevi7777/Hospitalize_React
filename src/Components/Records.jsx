@@ -109,6 +109,7 @@ function Records() {
                     })}
                 </tbody>
             </table>
+            <a href="#" style={{textDecoration: "none"}}>Load More Records</a>
         </center>
     </div>
   )
