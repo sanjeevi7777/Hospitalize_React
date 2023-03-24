@@ -57,10 +57,99 @@ color: #000000;
 }
 .Table th,td {
     padding: 10px;
-    
-    
-
 }
 .heading{
     padding: 20px;
 }
+th{
+    background-color: #7dc1f1;
+}
+.container {
+    border: 2px solid #dedede;
+    background-color: #cdf1f8;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker{
+    /* border-color: #ccc; */
+    border-radius: 5px;
+    padding: 40px;
+    margin: 10px 0;
+    border: 2px solid #dedede;
+    background-color:#d9eced
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.icon {
+    float: left;
+    max-width: 60px;
+  
+}
+
+/* Style the right image */
+.iconright {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0;
+    
+}
+
+/* Style time text */
+.timeright {
+    float: right;
+    margin-right: 50px;
+    /* color: #aaa; */
+}
+
+/* Style time text */
+.timeleft{
+    float: left;
+    /* color: #999; */
+}
+.symptomContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.symptomContainerIn table tr{
+    background-color: #0febff;
+}
+.symptomContainerIn{
+    background-color: #0febff;
+    padding: 50px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.symptomContainerIn button{
+    margin-top: 30px;
+
+}
+
+
+.RecordContainer{
+    margin-top: 50px;
+    height: 450px;
+}
+
+.Record{
+    
+}
+.buttons{
+    border: none;
+        padding: 7px;
+        background-color: rgb(51, 193, 240);
+        border-radius: 5px;
+}
+
