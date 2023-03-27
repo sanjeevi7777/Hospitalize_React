@@ -41,23 +41,23 @@ function PatientAppointment() {
             <div>
             <h1  style={{marginTop:"30px"}} className={Styles.appoinmentHeading }>Select Your Doctor</h1>
             <table style={{marginTop:"30px"}} className={Styles.containerTable}>
-                <tr>
-                <th>DoctorId</th>
-                <th>
+                <tr >
+                          <th style={{ backgroundColor: 'white' }}>DoctorId</th>
+                          <th style={{ backgroundColor: 'white' }}>
                     Doctor Name
                 </th>
-                <th>Specialist</th>
-                <th>Submit</th>
+                          <th style={{ backgroundColor: 'white' }}>Specialist</th>
+                          <th style={{ backgroundColor: 'white' }}>Submit</th>
                 </tr>
     
             {
               doctors.filter(doctor=>doctor.hopitalId==id).map((doc)=>
 
                 <tr>
-                              <td>{doc.doctorId} </td>
-                              <td>{doc.doctorName}</td>
-                              <td>{doc.specialist}</td>
-                              <td><button  onClick={(e)=>{navigate(`bookAppointment`,{state:{docId:doc.doctorId}})}}>BOOK</button></td>
+                      <td style={{ backgroundColor: 'white' }} >{doc.doctorId} </td>
+                      <td style={{ backgroundColor: 'white' }}>{doc.doctorName}</td>
+                      <td style={{ backgroundColor: 'white' }}>{doc.specialist}</td>
+                      <td style={{ backgroundColor: 'white' }}><button  onClick={(e)=>{navigate(`bookAppointment`,{state:{docId:doc.doctorId}})}}>BOOK</button></td>
                         </tr>
                 
 

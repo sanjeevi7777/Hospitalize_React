@@ -50,7 +50,7 @@ function Records() {
             }
         },
         {
-            id: 1,
+            id: 4,
             patientId: 11,
             Date: "12-01-2004",
             hospitalId: 21,
@@ -65,7 +65,7 @@ function Records() {
             }
         },
         {
-            id: 3,
+            id: 5,
             patientId: 13,
             Date: "10-04-2002",
             hospitalId: 11,
@@ -80,6 +80,7 @@ function Records() {
             }
         }
     ])
+
   return (
     <div>
         <PatientNavBar/>
@@ -98,12 +99,12 @@ function Records() {
                 <tbody>
                     {records.map((record)=>{
                         return(
-                            <tr>
-                                <td>{record.Date}</td>
-                                <td>{record.hospitalName}</td>
-                                <td>{record.DoctorName}</td>
-                                <td>{record.drug.drugName}</td>
-                                <td><a href="#" style={{textDecoration: "none"}}>View More...</a></td>
+                            <tr style={{backgroundColor:"f0f0f0"}}>
+                                <td style={{backgroundColor:"white"}}>{record.Date}</td>
+                                <td style={{backgroundColor:"white"}}>{record.hospitalName}</td>
+                                <td style={{backgroundColor:"white"}}>{record.DoctorName}</td>
+                                <td style={{backgroundColor:"white"}}>{record.drug.drugName}</td>
+                                <td style={{backgroundColor:"white"}}><a href="#" style={{textDecoration: "none"}}>View More...</a></td>
                             </tr>
                         )
                     })}

@@ -9,7 +9,7 @@
 
 .card{
 width: 250px;
-height: 300px;
+height: 320px;
 
 background: #FFFFFF;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -61,12 +61,10 @@ color: #000000;
 .heading{
     padding: 20px;
 }
-th{
-    background-color: #7dc1f1;
-}
+
 .container {
-    border: 2px solid #dedede;
-    background-color: #cdf1f8;
+    border: 2px solid #dedede;  
+    background-color: #fafcfc;
     border-radius: 5px;
     padding: 20px;
     margin: 10px 0;
@@ -79,7 +77,7 @@ th{
     padding: 40px;
     margin: 10px 0;
     border: 2px solid #dedede;
-    background-color:#d9eced
+    background-color:#e6e6e6
 }
 
 /* Clear floats */
@@ -142,10 +140,6 @@ th{
     margin-top: 50px;
     height: 450px;
 }
-
-.Record{
-    
-}
 .buttons{
     border: none;
         padding: 7px;
@@ -155,5 +149,17 @@ th{
 .complaintBox{
     box-shadow: 0px 0px 1.5px 1.5px;
     padding: 15px;
+    background-color: #d9f5fb;
 }
-
+.card h3{
+    color: black;
+}
+.appoinmentTable tr,th,td{
+    color: #000000;
+    background-color: white;
+    padding: 5px;
+}
+.inputs{
+    border-radius: 5px;
+    padding: 8px;
+}

@@ -4,6 +4,9 @@ import Style from '../Styles/Patients.module.css'
 import * as Icon from 'react-bootstrap-icons'
 import {Link} from 'react-router-dom'
 function Complaint() {
+  const [count,setCount]=useState(4);
+  const [comp,setComp]=useState("")
+  console.log(comp)
   const [getcomplaints, setGetComplaints] = useState([
     {
       hospitalId: 1,
@@ -32,11 +35,13 @@ function Complaint() {
             </h3>
             <div>
 
-              <textarea name="Complaints" rows={4} cols={40} placeholder="Give your Complaints Here" value={postcomplaints} onChange={(e) => setPostComplaints(e.target.value)} />
+              <textarea name="Complaints" type="text"rows={5} value={comp} onChange={(e)=>{setComp(e.target.value)}} cols={60} style={{textAlign:'center'}}placeholder="Give your Complaints Here"  />
             </div>
             <div>
 
-              <button className={Style.buttons} onClick={() => alert('Successfully complained')} >Complaint</button>
+              <button className={Style.buttons} onClick={() => {
+                setGetComplaints([{hospitalId:count,complaints:comp},...getcomplaints])
+               } }>Complaint</button>
             </div>
           </div>
         </div>

@@ -4,6 +4,10 @@ import {Link} from 'react-router-dom';
 import DoctorNavBar from '../Components/DoctorNavBar';
 import axios from 'axios'
 function DoctorAppoinment() {
+        axios.get('http://localhost:8080').
+    then((response)=>{
+        console.log(response.data)
+    })
     const [details, setDetails] = useState([
         {   Id:1,
             patientId: 10,
@@ -41,11 +45,11 @@ function DoctorAppoinment() {
                     {
                         details.map((det)=>
                         <tr>
-                            <td>{det.Id}</td>
-                            <td>{det.patientId}</td>
-                            <td>{det.patientName}</td>
-                            <td>{det.symptom}</td>
-                            <td><input type="checkbox"></input></td>
+                            <td style={{backgroundColor:"white"}}>{det.Id}</td>
+                            <td style={{backgroundColor:"white"}}>{det.patientId}</td>
+                            <td style={{backgroundColor:"white"}}>{det.patientName}</td>
+                            <td style={{backgroundColor:"white"}}>{det.symptom}</td>
+                            <td style={{backgroundColor:"white"}}><input type="checkbox"></input></td>
                         </tr>)
                     }
             </table>

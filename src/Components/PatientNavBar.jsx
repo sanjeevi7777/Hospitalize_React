@@ -29,6 +29,7 @@ function PatientNavBar() {
                             <li class="nav-item">
                                 <Link class="nav-link active" to='/patient/complaint'>Complaints</Link>
                             </li>
+                            
                             <div style={{ marginLeft: "100px" }}></div>
                             <li class="nav-item">
                                 <span class="glyphicon glyphicon-user"></span>
