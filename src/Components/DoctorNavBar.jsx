@@ -21,7 +21,7 @@ function DoctorNavBar() {
               <Link class="nav-link active" to='/doctor/home'>Home</Link>
               </li>
               <li class="nav-item">
-              <Link class="nav-link active" to='/doctor/appointment'>Appoinment</Link>
+              <Link class="nav-link active" to='/doctor/appointment'>Appointment</Link>
               </li>
               <li class="nav-item">
                 <Link class="nav-link active" to='/doctor/aboutus'>About</Link>
